@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.carousel-item img{
+    width: 100%;
+    height: 100vh;
+}
+.newsletter {
+    padding: 80px 0;
+    background: #0D6EFD;
+}
+    
+.newsletter .content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2; 
+}
+.newsletter .content h2 {
+    color: #243c4f;
+    margin-bottom: 40px; 
+}
+.newsletter .content .form-control {
+    height: 50px;
+    border-color: #ffffff;
+    border-radius:0;
+}
+.newsletter .content.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #243c4f;
+}
+.newsletter .content .btn {
+    min-height: 50px; 
+    border-radius:0;
+    background: #243c4f;
+    color: #fff;
+    font-weight:600;
+}
+.card-body img{
+    min-width: 50%;
+    max-height: 200px;
+}
+.footer-sec{
+    height: 20vh;
+}
+
+
+/* ---------------------------------------- */
+
+.custom-shape-divider-bottom-1691434057 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1691434057 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 110px;
+}
+
+.custom-shape-divider-bottom-1691434057 .shape-fill {
+    fill: #0D6EFD;
+}
+     
+
+/* ---------------------------------------- */
