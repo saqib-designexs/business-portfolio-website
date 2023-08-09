@@ -1,3 +1,5 @@
+include 'newsletter.php';
+include 'send_email.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -209,11 +211,12 @@
         <div class="content">
           <h2 class="text-white">SUBSCRIBE TO OUR NEWSLETTER</h2>
         <div class="input-group">
-               <input type="email" class="form-control" placeholder="Enter your email">
+               <input type="email" class="form-control" placeholder="Enter your email" id="nw_input">
                <span class="input-group-btn">
-               <button class="btn btn bg-white text-dark ms-2 ms-sm-2 ms-lg-2" type="submit">Subscribe Now</button>
+               <button class="btn btn bg-white text-dark ms-2 ms-sm-2 ms-lg-2" type="button" id="nw_btn" onclick="newsletter();">Subscribe Now</button>
                </span>
-                </div>
+        </div>
+        <p id="newsletter_message"></p>
         </div>
       </div>
       </div>
@@ -272,52 +275,36 @@
     </div>
     <div class="row">
       <div class="col-12 col-lg-6">
-        <form class="row g-3">
+        <form class="row g-3" id="contactForm">
           <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
-          </div>
-          <div class="col-12">
-            <label for="inputAddress" class="form-label">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-          </div>
-          <div class="col-12">
-            <label for="inputAddress2" class="form-label">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            <label class="form-label">Name</label>
+            <input type="input" class="form-control" id="name">
           </div>
           <div class="col-md-6">
-            <label for="inputCity" class="form-label">City</label>
-            <input type="text" class="form-control" id="inputCity">
+            <label class="form-label">Contact No</label>
+            <input type="number" class="form-control" id="number">
           </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">State</label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
+          
+          <div class="col-12">
+            <label class="form-label">Subject</label>
+            <input type="input" class="form-control" id="subject" placeholder="Type your subject">
           </div>
-          <div class="col-md-2">
-            <label for="inputZip" class="form-label">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
+          
+          <div class="col-12">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
           </div>
           <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" for="gridCheck">
-                Check me out
-              </label>
-            </div>
+            <label class="form-label">Message</label>
+          <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px" spellcheck="false"></textarea>
           </div>
           <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary" id="submit_btn" onclick="submitForm(event)">Send Message</button>
           </div>
         </form>
+        <p class="text-center text-primary" id="email_message"></p>
       </div>
-      <div class="col-12 col-lg-6 m-auto text-center text-lg-end text-sm-center mt-3 mt-sm-3 mt-lg-0">
+      <div class="col-12 col-lg-6 m-auto text-center text-lg-end text-sm-center mt-3 mt-sm-3 mt-lg-4">
         <img src="images/extra/3.jpg" class="img-fluid img-thumbnail">
       </div>
     </div>
@@ -345,6 +332,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
     <script>
       AOS.init();
     </script>
